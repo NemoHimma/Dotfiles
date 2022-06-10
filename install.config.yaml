@@ -1,0 +1,38 @@
+- defaults:
+    link:
+        relink: true
+        create: true
+
+- clean: ['~', '~/bin']
+
+- link:
+    #function
+    ~/bin:
+        glob: true
+        path: scripts/*
+        relink: true
+
+    #vim
+    ~/.vimrc: vim/vimrc
+    ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
+
+    #zsh
+    ~/.zshrc:
+        path: zsh/zshrc
+        force: true
+    ~/.on-my-zsh: zsh/oh-my-zsh
+    ~/.zgenom: zsh/zgenom  # manage zsh plugins
+    
+    #tmux
+    ~/.tmux.conf: tmux.conf
+
+- shell:
+    - [chsh -s $(which zsh), Making zsh the default shell]
+    - [git submodule update --init --recursive, Installing submodules]
+    - 
+     command: ./git/set-gitconfig.sh #set up git
+     description: Configuring Git
+     stdout: true
+     quiet: false
+
+
