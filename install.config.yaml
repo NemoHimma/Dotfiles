@@ -13,8 +13,8 @@
         relink: true
 
     #vim
-    ~/.vimrc: vim/vimrc
-    ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
+    ~/.vimrc: vimrc
+    ~/.vim: vim
 
     #zsh
     ~/.zshrc:
