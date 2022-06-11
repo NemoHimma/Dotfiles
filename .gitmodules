@@ -10,3 +10,9 @@
 [submodule "dotbot-plugins/dotbot-asdf"]
 	path = dotbot-plugins/dotbot-asdf
 	url = https://github.com/sobolevn/dotbot-asdf.git
+[submodule "zsh/zgenom"]
+	path = zsh/zgenom
+	url = https://github.com/jandamm/zgenom.git
+[submodule "zsh/ohmyzsh"]
+	path = zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git

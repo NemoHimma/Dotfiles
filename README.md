@@ -37,6 +37,14 @@ I copy the gstate function in scripts from [here](https://github.com/denolfe/dot
 3. Setup vim [solarized theme](https://github.com/altercation/vim-colors-solarized) through `git submodule add https://github.com/altercation/vim-colors-solarized.git` under the folder of `vim/bundle/`.
 
 # 5.Zsh
-1. *zprofile*:export environment variables and source zshrc file.
-2. *zshrc*:define theme, aliases, functions 
+1. [zgenom](https://github.com/jandamm/zgenom) is a zsh plugin manager, help us to easily set up zsh-configuration. For instance, load [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/tree/master) configuration framework, add other plugins.In order to use it, apply `source "${HOME}/.zgenom/zgenom.zsh"` on the top of zshrc file to enable zgenom.
+2. We can look up useful [built-in plugins](https://github.com/unixorn/awesome-zsh-plugins), [themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), [cheetsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet) and [FAQ](https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-reload-the-zshrc-file) for resolving oh-my-zsh issues when encountered. If you want speed increase, [Prezto](https://github.com/sorin-ionescu/prezto) is another alternative framework for zsh.
+3. **zshrc**: source zgenom, use zgenom to install zsh plugins and themes, configure the setting and options.More Details see [denolfe/dotfiles/zsh](https://github.com/denolfe/dotfiles).
+
+# Summary
+-  Use **Dotbot** to manage Dotfiles, **asdf** as Dotbot-plugin to manage multiple programming languages, **install.conf.yaml** to organize syslinks between configuration files and Dotfiles repo.
+- **Scripts** are some useful function written by bash built-in commands without the support of advanced commands or any other functions.
+- **Vim** includes configuration about vimrc file, vim-plugin, vim built-in plugin manager and vim-theme.
+- **Zsh** is more complicated.First, zsh-plugins and theme are managed by zgenom, it basically set up tool sensitive aliases, code complition, prompts and highlighting.Second, configure shell habit and behaviors about zsh.Third, setup some environment variables that is required by other applications like MuJoCo, which we can organize them under `~/.secrets` folder.Fourth, Some advanced functions or aliases that based on scripts and zsh-commands.
+
 Manage configurations of zsh/vim/tmux/git/aliases

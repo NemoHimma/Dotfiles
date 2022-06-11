@@ -18,10 +18,11 @@
 
     #zsh
     ~/.zshrc:
-        path: zsh/zshrc
+        path: zsh/zshrc.zsh
         force: true
     ~/.on-my-zsh: zsh/oh-my-zsh
     ~/.zgenom: zsh/zgenom  # manage zsh plugins
+    ~/.p10k.zsh: zsh/p10k.zsh
     
     #tmux
     ~/.tmux.conf: tmux.conf
