@@ -7,3 +7,6 @@
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "dotbot-plugins/dotbot-asdf"]
+	path = dotbot-plugins/dotbot-asdf
+	url = https://github.com/sobolevn/dotbot-asdf.git

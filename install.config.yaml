@@ -26,6 +26,14 @@
     #tmux
     ~/.tmux.conf: tmux.conf
 
+- asdf:
+    - plugin: python
+      url: https://github.com/tuvistavie/asdf-python.git
+      global: 3.7.4
+      versions: 
+        - 3.7.4
+
+
 - shell:
     - [chsh -s $(which zsh), Making zsh the default shell]
     - [git submodule update --init --recursive, Installing submodules]

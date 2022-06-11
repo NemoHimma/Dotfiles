@@ -12,6 +12,14 @@ cp dotbot/tools/git-submodule/install .
 touch install.conf.yaml
 ```
 
+Install a dotbot plugin named [dotbot-asdf](https://github.com/sobolevn/dotbot-asdf.git) and modify the install script as required.This plugin help to manage multiple programming lanaguage's dependecies and versions as a whole.
+
+```
+mkdir dotbot-plugins && cd dotbot-plugins
+git submodule add https://github.com/sobolevn/dotbot-asdf.git
+echo '"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-asdf -c "${CONFIG}" "${@}"' >> ../install
+```
+
 # 2.Install.conf.yaml
 Go through the install.conf.yaml file. 
 1. Some useful functions written in scripts directory is syslinked in `~/bin`.
@@ -28,4 +36,7 @@ I copy the gstate function in scripts from [here](https://github.com/denolfe/dot
 2. vim plugins is managed by built-in mananger, so just add the plugin submodule you need in vim/pack/vendor/start.To start with, I add [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git) vim plugin through `git submodule add https://github.com/ctrlpvim/ctrlp.vim.git` under the folder of `/vim/pack/vendor/start/`.
 3. Setup vim [solarized theme](https://github.com/altercation/vim-colors-solarized) through `git submodule add https://github.com/altercation/vim-colors-solarized.git` under the folder of `vim/bundle/`.
 
+# 5.Zsh
+1. *zprofile*:export environment variables and source zshrc file.
+2. *zshrc*:define theme, aliases, functions 
 Manage configurations of zsh/vim/tmux/git/aliases
