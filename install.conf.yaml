@@ -5,6 +5,12 @@
 
 - clean: ['~', '~/bin']
 
+# dependency for dotbot and its plugin to perform action.
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    #- [git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0, Installing asdf]
+
+
 - link:
     #function
     ~/bin:
@@ -25,7 +31,7 @@
     ~/.p10k.zsh: zsh/p10k.zsh
     
     #tmux
-    ~/.tmux.conf: tmux.conf
+    #~/.tmux.conf: tmux.conf
 
 - asdf:
     - plugin: python
@@ -36,8 +42,6 @@
 
 
 - shell:
-    - [chsh -s $(which zsh), Making zsh the default shell]
-    - [git submodule update --init --recursive, Installing submodules]
     - 
      command: ./git/set-gitconfig.sh #set up git
      description: Configuring Git

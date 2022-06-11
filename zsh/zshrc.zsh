@@ -6,8 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 #!/usr/bin/env bash
+. $HOME/.asdf/asdf.sh
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
-# load zgenon
+# load zgenom
 source ~/.zgenom/zgenom.zsh
 export GPG_TTY=$TTY # https://unix.stackexchange.com/a/608921
 export ZGEN_CUSTOM_COMPDUMP=$ZSH_COMPDUMP
