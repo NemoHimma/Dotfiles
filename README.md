@@ -42,8 +42,9 @@ I copy the gstate function in scripts from [here](https://github.com/denolfe/dot
 # 4.Vim 
 1. Use vimrc file to customize vim editor where I copy the configuration file from [here](https://github.com/anishathalye/dotfiles/blob/master/vimrc) to start with.
 2. vim plugins is managed by built-in mananger, so just add the plugin submodule you need in vim/pack/vendor/start.To start with, I add [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git) vim plugin through `git submodule add https://github.com/ctrlpvim/ctrlp.vim.git` under the folder of `/vim/pack/vendor/start/`.
-3. Setup vim [solarized theme](https://github.com/altercation/vim-colors-solarized) through `git submodule add https://github.com/altercation/vim-colors-solarized.git` under the folder of `vim/bundle/`.
+3. Setup vim [solarized theme](https://github.com/altercation/vim-colors-solarized) through `git submodule add https://github.com/altercation/vim-colors-solarized.git` under the folder of `vim/pack/vendor/start/`.
 4. Setup powerline status for vim using pip install.
+
 ```
 #Comannd Line
 pip3 install powerline-status
@@ -54,10 +55,29 @@ vimloc="/powerline/bindings/vim"
 set rtp+=${vimpwl}${vimloc}
 ```
 
+If there is a problem about system powerline fonts, run following command to install:
+```
+sudo apt-get install fonts-powerline
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+mv PowerlineSymbols.otf /usr/share/fonts/
+mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+fc-cache -vf /usr/share/fonts/
+
+# If something still goes wrong, it's probaly related to locales
+locale -a # check
+sudo apt install locales
+sudo vim /etc/locale.gen
+sudo locale-gen
+export LANG='en_US.uft-8'
+```
+
 # 5.Zsh
 1. [zgenom](https://github.com/jandamm/zgenom) is a zsh plugin manager, help us to easily set up zsh-configuration. For instance, load [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/tree/master) configuration framework, add other plugins.In order to use it, apply `source "${HOME}/.zgenom/zgenom.zsh"` on the top of zshrc file to enable zgenom.
 2. We can look up useful [built-in plugins](https://github.com/unixorn/awesome-zsh-plugins), [themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), [cheetsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet) and [FAQ](https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-reload-the-zshrc-file) for resolving oh-my-zsh issues when encountered. If you want speed increase, [Prezto](https://github.com/sorin-ionescu/prezto) is another alternative framework for zsh.
 3. **zshrc**: source zgenom, use zgenom to install zsh plugins and themes, configure the setting and options.More Details see [denolfe/dotfiles/zsh](https://github.com/denolfe/dotfiles).
+4. [powerlevel10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) is a fantastic theme for zsh, and it's installed by zgenom as a zsh-plugin. If you have any display problem, just run `p10k configure` to generate a `.p10k.zsh` configuration file for your system.
+
 
 # Summary
 -  Use **Dotbot** to manage Dotfiles, **asdf** as Dotbot-plugin to manage multiple programming languages, **install.conf.yaml** to organize syslinks between configuration files and Dotfiles repo.
