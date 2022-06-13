@@ -3,7 +3,7 @@
         relink: true
         create: true
 
-- clean: ['~']
+- clean: ['~','~/bin']
 
 # dependency for dotbot and its plugin to perform action.
 - shell:
@@ -11,21 +11,27 @@
 
 
 - link:
+    #################### All the scripts function, need to export PATH=$PATH:~/bin
+    ~/bin/: 
+    glob: true
+    path: scripts/*
+
+    #asdf
     ~/.asdf: asdf 
 
-    #vim
+    #####################     vim     ####################
     ~/.vimrc: vimrc
     ~/.vim: vim
 
-    #zsh
+    #####################     zsh     ####################
     ~/.zshrc:
         path: zsh/zshrc.zsh
         force: true
     ~/.oh-my-zsh: zsh/ohmyzsh
     ~/.zgenom: zsh/zgenom  # manage zsh plugins
-    ~/.p10k.zsh: zsh/p10k.zsh
+    ~/.p10k.zsh: zsh/p10k.zsh # p10k configure can create a configuration for powerlevel10k
     
-    #tmux
+    #####################     tmux    ####################
     #~/.tmux.conf: tmux.conf
 
 - asdf:
