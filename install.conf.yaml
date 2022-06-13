@@ -12,9 +12,9 @@
 
 - link:
     #################### All the scripts function, need to export PATH=$PATH:~/bin
-    # ~/bin/: 
-    # glob: true
-    # path: scripts/*
+    ~/bin/: 
+        glob: true
+        path: scripts/**
 
     #asdf
     ~/.asdf: asdf 
