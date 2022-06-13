@@ -12,9 +12,9 @@
 
 - link:
     #################### All the scripts function, need to export PATH=$PATH:~/bin
-    ~/bin/: 
-    glob: true
-    path: scripts/*
+    # ~/bin/: 
+    # glob: true
+    # path: scripts/*
 
     #asdf
     ~/.asdf: asdf 
@@ -43,10 +43,14 @@
 
 
 - shell:
-    - 
-     command: ./git/set-gitconfig.sh #set up git
-     description: Configuring Git
-     stdout: true
-     quiet: false
+    - command: ./vim/set-vimpowerline.sh
+      description: Configuring vim powerline by python
+      stdout: true
+      quiet: false
+
+    - command: ./git/set-gitconfig.sh #set up git
+      description: Configuring Git
+      stdout: true
+      quiet: false
 
 

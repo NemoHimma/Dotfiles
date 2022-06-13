@@ -43,7 +43,7 @@ I copy the gstate function in scripts from [here](https://github.com/denolfe/dot
 1. Use vimrc file to customize vim editor where I copy the configuration file from [here](https://github.com/anishathalye/dotfiles/blob/master/vimrc) to start with.
 2. vim plugins is managed by built-in mananger, so just add the plugin submodule you need in vim/pack/vendor/start.To start with, I add [ctrlp](https://github.com/ctrlpvim/ctrlp.vim.git) vim plugin through `git submodule add https://github.com/ctrlpvim/ctrlp.vim.git` under the folder of `/vim/pack/vendor/start/`.
 3. Setup vim [solarized theme](https://github.com/altercation/vim-colors-solarized) through `git submodule add https://github.com/altercation/vim-colors-solarized.git` under the folder of `vim/pack/vendor/start/`.
-4. Setup powerline status for vim using pip install.
+4. Setup powerline status for vim using pip install. This is written by `vim/set-vimpowerline.sh` that is configured in install.conf.yaml
 
 ```
 #Comannd Line
