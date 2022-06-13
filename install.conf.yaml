@@ -3,20 +3,15 @@
         relink: true
         create: true
 
-- clean: ['~', '~/bin']
+- clean: ['~']
 
 # dependency for dotbot and its plugin to perform action.
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    #- [git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0, Installing asdf]
 
 
 - link:
-    #function
-    ~/bin:
-        glob: true
-        path: scripts/*
-        relink: true
+    ~/.asdf: asdf 
 
     #vim
     ~/.vimrc: vimrc
