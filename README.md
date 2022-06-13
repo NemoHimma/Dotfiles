@@ -85,4 +85,10 @@ export LANG='en_US.uft-8'
 - **Vim** includes configuration about vimrc file, vim-plugin, vim built-in plugin manager and vim-theme.
 - **Zsh** is more complicated.First, zsh-plugins and theme are managed by zgenom, it basically set up tool sensitive aliases, code complition, prompts and highlighting.Second, configure shell habit and behaviors about zsh.Third, setup some environment variables that is required by other applications like MuJoCo, which we can organize them under `~/.secrets` folder.Fourth, Some advanced functions or aliases that based on scripts and zsh-commands.
 
+# Problem
+> All is due to VPN.
+1. Set proxy to run the first time `./install` for downloading dotbot submodule.
+2. Run the second time `./install` without proxy for installing python using asdf because of error occured when using curl with tunnel.
+3. Run the third time with proxy exported in .zshrc file using `exec zsh` command for downling zsh-plugins.
+
 Manage configurations of zsh/vim/tmux/git/aliases
