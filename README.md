@@ -78,6 +78,9 @@ export LANG='en_US.uft-8'
 3. **zshrc**: source zgenom, use zgenom to install zsh plugins and themes, configure the setting and options.More Details see [denolfe/dotfiles/zsh](https://github.com/denolfe/dotfiles).
 4. [powerlevel10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) is a fantastic theme for zsh, and it's installed by zgenom as a zsh-plugin. If you have any display problem, just run `p10k configure` to generate a `.p10k.zsh` configuration file for your system.
 
+# 6.Tmux
+Copy the configuration file tmux.conf and tmux.conf.local from [Oh-my-tmux](https://github.com/gpakosz/.tmux#configuration) to start my modification. Read the files and instructions about how to use them.It required tmux version > 2.4, check that.
+
 
 # Summary
 -  Use **Dotbot** to manage Dotfiles, **asdf** as Dotbot-plugin to manage multiple programming languages, **install.conf.yaml** to organize syslinks between configuration files and Dotfiles repo.

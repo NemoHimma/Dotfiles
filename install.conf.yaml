@@ -32,7 +32,8 @@
     ~/.p10k.zsh: zsh/p10k.zsh # p10k configure can create a configuration for powerlevel10k
     
     #####################     tmux    ####################
-    #~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf  # global customization
+    ~/.tmux.conf.local: tmux/tmux.conf.local # local user customization
 
 - asdf:
     - plugin: python
