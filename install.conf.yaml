@@ -21,7 +21,7 @@
         path: scripts/**
 
     #asdf
-    ~/.asdf: asdf 
+    ~/.asdfrc: asdfrc 
 
     #####################     vim     ####################
     ~/.vimrc: vimrc
