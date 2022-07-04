@@ -12,9 +12,9 @@ source ~/.zshenv
 . /opt/homebrew/opt/asdf/libexec/asdf.sh 
 
 # append completions to fpath
-FPATH=(${ASDF_DIR}/completions $FPATH)
+fpath=(${ASDF_DIR}/completions $fpath)
 # enable zsh completion for brew commands
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FAPTH}"
+#FPATH="$(brew --prefix)/share/zsh/site-functions:${FAPTH}"
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
@@ -36,7 +36,7 @@ if ! zgenom saved; then
     #plugins
     zgenom ohmyzsh plugins/git # provides many aliases and a few useful functions about git.
     zgenom ohmyzsh plugins/tmux # aliases to use tmux for convenience.
-    #zgenom ohmyzsh plugins/autojump # Using 'j' to quick navigate among directories and files.
+    zgenom ohmyzsh plugins/autojump # Using 'j' to quick navigate among directories and files.
     zgenom ohmyzsh plugins/docker # aliases about docker
 
     #plugins that not in ohmyzsh

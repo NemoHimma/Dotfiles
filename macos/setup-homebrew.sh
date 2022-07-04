@@ -22,6 +22,7 @@ PACKAGES=(
   "zsh"
   "tmux"
   "vim"
+  "autojump"
 )
 
 echo "Checking Homebrew packages..."
