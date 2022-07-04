@@ -28,6 +28,7 @@
     ~/.vim: vim
 
     #####################     zsh     ####################
+    ~/.zshenv: zsh/zshenv.zsh
     ~/.zshrc:
         path: zsh/zshrc.zsh
         force: true
@@ -42,9 +43,9 @@
 - asdf:
     - plugin: python
       url: https://github.com/tuvistavie/asdf-python.git
-      global: 3.7.4
+      global: 3.7.12
       versions: 
-        - 3.7.4
+        - 3.7.12
 
 
 - shell:

@@ -21,6 +21,7 @@ PACKAGES=(
   "ripgrep"
   "zsh"
   "tmux"
+  "vim"
 )
 
 echo "Checking Homebrew packages..."
