@@ -29,6 +29,7 @@
 
     #####################     zsh     ####################
     ~/.zshenv: zsh/zshenv.zsh
+    ~/.zprofile: zsh/zprofile.zsh
     ~/.zshrc:
         path: zsh/zshrc.zsh
         force: true

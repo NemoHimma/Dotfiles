@@ -49,7 +49,7 @@ asdf reshim
 
 Remember that brew install every program, package and application.Now it's time to configure them in zsh.
 1. Choose the zsh shell you are using by adding shell path like `/opt/homebrew/bin/zsh` into `/etc/shells`, then `chsh`.
-2. *Vim*: export `/opt/homebrew/bin/vim` in `zshenv.zsh` file to choose which vim editor you use. Then link `vim folder` and `vimrc file` to custom vim editor like adding vim-plugin.
+2. [Vim](https://vim.fandom.com/wiki/Vim_documentation): export `/opt/homebrew/bin/vim` in `zshenv.zsh` file to choose which vim editor you use. Then link `vim folder` and `vimrc file` to custom vim editor like adding vim-plugin.(There is a README.md in vim folder about customing vim editor)
 3. [asdf](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf): Overall manager for differt type and version of programming languages. It's been set up in zshrc.zsh file by `. /opt/homebrew/opt/asdf/libexec/asdf.sh` at the bottle of that file. In `install.conf.yaml`, we have used asdf install python 3.7.12.Notice that `fpath` is to cutsom asdf completions in zsh.
 > It's worth knowing that python 3.7.12 wouldn't lead to a problem on macOS ARM M1 pro.
 4. [zgenom](https://github.com/jandamm/zgenom#Usage): Zsh-plugin manager to use ohmyzsh and its plugins, zsh-users like zsh-autosuggestions and etc. This can simplify zshrc file. By adding `source ~/.zgenom/zgenom.zsh`, it enable zsh shell use zgenom to manage zsh-plugins through generating `init.sh`.
