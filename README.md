@@ -1,7 +1,27 @@
 # Abstract
-1. Dotbot is merely a bootstrapper for dotfiles.
-2. Brew manages all the formulaes and casks for macOS system like asdf package, vim program or iterm2 application.
-3. Zsh configuration files(.zshenv, .zprofile, .zshrc) are used to custom packages, programs and applications in zsh shell. Simply, these files just tell the shel where to find programs, to custom setup application behavior and frequently used packages.
+1. [Dotbot](https://github.com/anishathalye/dotbot/tree/d2f76a25933f97cd37ef94e3bf9c134b9c55a02a) is merely a bootstrapper for dotfiles.(Dotfiles Bootstrapper)
+2. [Brew](https://docs.brew.sh/Formula-Cookbook) manages all the formulaes and casks for macOS system like asdf package, vim program or iterm2 application.(Package Manager)
+3. [Asdf](https://asdf-vm.com/manage/core.html#update) is a version manager to ensure the exact same versions of tools, unlike brew that manage tool dependencies.(Tool Version Manager)
+> brew can install specific version of tool and its dependencies.However, it would take comsuming energy to manage different versions of that tool and its dependencies.Here comes with asdf.
+4. Zsh configuration files(.zshenv, .zprofile, .zshrc) are used to custom packages, programs and applications in zsh shell. Simply, these files just tell the shel where to find programs, to custom application behavior and setup frequently used packages.(Program Runner)
+
+# Command Usage of Key Managers:
+1. Install [asdf plugin](https://github.com/asdf-vm/asdf-plugins) and reshim the plugin package.
+```
+brew install plugin-dependencies # brew install gpg gawk
+asdf plugin add plugin-name plugin-url # asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install plugin-name plugin-version # asdf install nodejs latest
+
+# Specify the global plugin version to use in ~/.tool-versions.
+asdf global plugin-name plugin-version # asdf global nodejs latest
+
+# Use asdf python plugin to install tldr package
+pip3 install tldr
+# Make tldr accessibale in zsh  
+asdf reshim
+```
+> `asdf info` to view OS, shell, asdf version, asdf environment variable and installed plugins.
+
 
 
 # Homebrew
@@ -11,7 +31,7 @@
 > built-in vim on macOS ARM doesn't support python3, so it causes a problem when try to use powerline inside vim.
 
 ## Basics of brew
-- **formula**: Homebrew package definition built from upstream sources
+- **formula**: Homebrew package definition built from upstream sources(upstream dependencies)
 - **cask**: Homebrew package definition that installs macOS native applications
 - **keg**: installation destination directory of a given formula version 
 - **rack**: directory containing one or more versioned kegs
@@ -30,7 +50,7 @@
 Remember that brew install every program, package and application.Now it's time to configure them in zsh.
 1. Choose the zsh shell you are using by adding shell path like `/opt/homebrew/bin/zsh` into `/etc/shells`, then `chsh`.
 2. *Vim*: export `/opt/homebrew/bin/vim` in `zshenv.zsh` file to choose which vim editor you use. Then link `vim folder` and `vimrc file` to custom vim editor like adding vim-plugin.
-3. [asdf](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf): Overall manager for differt type and version of programming languages. It's been set up in zshrc.zsh file by `. /opt/homebrew/opt/asdf/libexec/asdf.sh`. In `install.conf.yaml`, we have used asdf install python 3.7.12.Notice that `fpath` is to cutsom asdf completions in zsh.
+3. [asdf](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf): Overall manager for differt type and version of programming languages. It's been set up in zshrc.zsh file by `. /opt/homebrew/opt/asdf/libexec/asdf.sh` at the bottle of that file. In `install.conf.yaml`, we have used asdf install python 3.7.12.Notice that `fpath` is to cutsom asdf completions in zsh.
 > It's worth knowing that python 3.7.12 wouldn't lead to a problem on macOS ARM M1 pro.
 4. [zgenom](https://github.com/jandamm/zgenom#Usage): Zsh-plugin manager to use ohmyzsh and its plugins, zsh-users like zsh-autosuggestions and etc. This can simplify zshrc file. By adding `source ~/.zgenom/zgenom.zsh`, it enable zsh shell use zgenom to manage zsh-plugins through generating `init.sh`.
 > `init.sh` is located in `~/.zgenom/source/init.sh`, it would export and source all the zsh-plugins with their completions.
