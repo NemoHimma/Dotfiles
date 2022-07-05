@@ -11,18 +11,18 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1
 
 PACKAGES=(
-  "asdf"    
-  "fzf"
+  "asdf"    # dotbot use asdf to install python 3.7.12  
+  "fzf"     
   "git"     # use this git by prceeding brew dir in $PATH
-  "exa"
+  "exa"     # modern enhancement of `ls`
   "tree"
-  "fd"
+  "fd"      # enhanced version of `find`
   "jq"
-  "ripgrep"
-  "zsh"      #
+  "ripgrep" # enhanced version of `grep` short for `rg`
+  "zsh"      
   "tmux"      
-  "vim"      # environment variable is set in .zshenv file
-  "autojump" # used by oh-my-zsh plugin
+  "vim"     
+  "autojump" # used as oh-my-zsh plugin short for `j`
 )
 
 echo "Checking Homebrew packages..."

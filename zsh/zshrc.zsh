@@ -33,11 +33,17 @@ if ! zgenom saved; then
     zgenom ohmyzsh plugins/tmux # aliases to use tmux for convenience.
     zgenom ohmyzsh plugins/autojump # Using 'j' to quick navigate among directories and files.
     zgenom ohmyzsh plugins/docker # aliases about docker
+    zgenom ohmyzsh plugins/fzf
 
     #plugins that not in ohmyzsh
     zgenom load zsh-users/zsh-autosuggestions
     zgenom load zsh-users/zsh-syntax-highlighting
     zgenom load zsh-users/zsh-history-substring-search
+
+    # Warn you when you run a command that you've got an alias for
+    zgenom load djui/alias-tips
+    
+    # Completion-only repo
     zgenom load zsh-users/zsh-completions src
     
     #Theme
@@ -91,6 +97,11 @@ test -f ~/.zshrc.local && source ~/.zshrc.local
 # Load all path files
 #for f in $DOTFILES/path/*.path.sh; do source $f; done
 
+###########################
+# Configure fzf
+export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border --pointer='*' --bind 'ctrl-l:cancel''
+export FZF_TMUX_HEIGHT=50%
+###########################
 
 # tell zsh to setup asdf so that 
 . $(brew --prefix asdf)/libexec/asdf.sh 
