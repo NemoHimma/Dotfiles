@@ -141,37 +141,9 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 let g:buffergator_suppress_keymaps = 1
 nnoremap <Leader>b :BuffergatorToggle<CR>
 
-" gundo
-nnoremap <Leader>u :GundoToggle<CR>
-if has('python3')
-    let g:gundo_prefer_python3 = 1
-endif
-
 " ctrlp
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
-
-" ag / ack.vim
-command -nargs=+ Gag Gcd | Ack! <args>
-nnoremap K :Gag "\b<C-R><C-W>\b"<CR>:cw<CR>
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-    let g:ackprg = 'ag --vimgrep'
-endif
-
-" syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-    \ 'mode': 'passive',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': []
-\}
-nnoremap <Leader>s :SyntasticCheck<CR>
-nnoremap <Leader>r :SyntasticReset<CR>
-nnoremap <Leader>i :SyntasticInfo<CR>
-nnoremap <Leader>m :SyntasticToggleMode<CR>
 
 " easymotion
 map <Space> <Plug>(easymotion-prefix)
@@ -210,9 +182,6 @@ let g:markdown_fenced_languages = [
 \]
 let g:markdown_syntax_conceal = 0
 let g:markdown_folding = 1
-
-" fugitive
-set tags^=.git/tags;~
 
 "---------------------
 " Local customizations

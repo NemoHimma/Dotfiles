@@ -1,4 +1,5 @@
 > [Vim wiki](https://vim.fandom.com/wiki/Vim_documentation)
+> The goal is not to make vim an idle but more conviennt.
 # Movements in Normal Mode
 - (Character)`hjkl`: left, down, up, right
 - (Word)`w b`: beginning of next word and backward word;`e ge`:end of next word and last word (ge "go to the end of last word")
@@ -42,7 +43,16 @@ In Summary, a command is compose of `operations`(d,y,c) + `number`(3) + `descrip
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim): search file to be opened in vim.
 > `^p` to invoke
 - [vim-markdown](https://github.com/tpope/vim-markdown/tree/b78bbce3371a2eb56c89f618cd4ab2baadc9ee61): syntax highlighting
-- [nerd-tree](https://github.com/preservim/nerdtree.git)
+- [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized.git): color theme
+- [nerd-tree](https://github.com/preservim/nerdtree.git):display folder structure.
+> `\n` to invoke, `?` to list nerd-tree command. It's useful to open files in tab.
+- [buffergator](https://github.com/jeetsukumaran/vim-buffergator/tree/947b60dca4d4fc6a041a6ec84b17ca6736d1b916): open a window listing all buffers.
+> `\b` to invoke, `^t` to open a buffer in new tab.
+- [easymotion](https://github.com/easymotion/vim-easymotion/tree/d75d9591e415652b25d9e0a3669355550325263d),[incsearch](https://github.com/haya14busa/incsearch.vim/tree/25e2547fb0566460f5999024f7a0de7b3775201f), [incsearch-easymotion](https://github.com/haya14busa/incsearch-easymotion.vim/tree/fcdd3aee6f4c0eef1a515727199ece8d6c6041b5)
+> easymotion is triggered by <Space><Space><Motion>
+- Maybe [nerdcommenter](https://github.com/preservim/nerdcommenter/tree/119b99d1662113a588734e3666213d246e50900d): better add comment
+
+> Every time you feel stupid about the operations performing in vim, there always a better way to do it. Just search on the internet and learn. Improving...
 
 
 

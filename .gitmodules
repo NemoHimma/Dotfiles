@@ -28,3 +28,18 @@
 [submodule "vim/pack/vendor/start/vim-markdown"]
 	path = vim/pack/vendor/start/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "vim/pack/vendor/start/nerdtree"]
+	path = vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/vendor/start/vim-buffergator"]
+	path = vim/pack/vendor/start/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "vim/pack/vendor/start/vim-easymotion"]
+	path = vim/pack/vendor/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "vim/pack/vendor/start/incsearch.vim"]
+	path = vim/pack/vendor/start/incsearch.vim
+	url = https://github.com/haya14busa/incsearch.vim.git
+[submodule "vim/pack/vendor/start/incsearch-easymotion.vim"]
+	path = vim/pack/vendor/start/incsearch-easymotion.vim
+	url = https://github.com/haya14busa/incsearch-easymotion.vim.git
