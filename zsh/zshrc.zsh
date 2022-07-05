@@ -53,7 +53,8 @@ if ! zgenom saved; then
 fi
 
 source ~/.p10k.zsh
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+# The following comment line is executed by zgenom as expected.
+#[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # History Options
 setopt append_history
