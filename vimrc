@@ -148,7 +148,6 @@ if has('python3')
 endif
 
 " ctrlp
-nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
 
