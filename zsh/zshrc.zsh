@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,8 +6,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#!/usr/bin/env bash
-source ~/.zshenv
+echo "running zshrc"
+##############################
+#Setup brew packages ahead of system packages in $PATH.
+#Below use absolute path to refer brew command
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# So it's only applicable for macOS ARM M1 Pro for now.
+##############################
+
 # load zgenom
 source ~/.zgenom/zgenom.zsh
 export GPG_TTY=$TTY # https://unix.stackexchange.com/a/608921
@@ -85,8 +92,8 @@ test -f ~/.zshrc.local && source ~/.zshrc.local
 #for f in $DOTFILES/path/*.path.sh; do source $f; done
 
 
-# tell zsh to setup asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh 
+# tell zsh to setup asdf so that 
+. $(brew --prefix asdf)/libexec/asdf.sh 
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)

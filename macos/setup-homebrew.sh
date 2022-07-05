@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+# bash know brew command but zsh doesn't
 # Install homebrew and essential packages
 
 if ! type brew > /dev/null 2>&1; then
@@ -11,18 +11,18 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1
 
 PACKAGES=(
-  "asdf"
+  "asdf"    
   "fzf"
-  "git"
+  "git"     # use this git by prceeding brew dir in $PATH
   "exa"
   "tree"
   "fd"
   "jq"
   "ripgrep"
-  "zsh"
-  "tmux"
-  "vim"
-  "autojump"
+  "zsh"      #
+  "tmux"      
+  "vim"      # environment variable is set in .zshenv file
+  "autojump" # used by oh-my-zsh plugin
 )
 
 echo "Checking Homebrew packages..."
