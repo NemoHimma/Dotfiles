@@ -33,6 +33,7 @@ if ! zgenom saved; then
     zgenom ohmyzsh plugins/tmux # aliases to use tmux for convenience.
     zgenom ohmyzsh plugins/autojump # Using 'j' to quick navigate among directories and files.
     zgenom ohmyzsh plugins/docker # aliases about docker
+    zgenom ohmyzsh plugins/command-not-found
     zgenom ohmyzsh plugins/fzf
 
     #plugins that not in ohmyzsh
@@ -54,8 +55,6 @@ if ! zgenom saved; then
 fi
 
 source ~/.p10k.zsh
-# The following comment line is executed by zgenom as expected.
-#[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # History Options
 setopt append_history
@@ -92,19 +91,35 @@ test -f ~/.zshrc.local && source ~/.zshrc.local
 #for f in $DOTFILES/functions/*; do source $f; done
 
 # Load aliases
+test -f ~/.aliases && source ~/.aliases
 #for f in $DOTFILES/aliases/*.aliases.*sh; do source $f; done
 
 # Load all path files
 #for f in $DOTFILES/path/*.path.sh; do source $f; done
 
 ###########################
-# Configure fzf
+### Configure fzf
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border --pointer='*' --bind 'ctrl-l:cancel''
 export FZF_TMUX_HEIGHT=50%
 ###########################
 
-# tell zsh to setup asdf so that 
+###########################
+### Configure autojump 
+#[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+###########################
+
+###########################
+###  Configure command-not-found
+HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+if [ -f "$HB_CNF_HANDLER" ]; then
+source "$HB_CNF_HANDLER";
+fi
+###########################
+
+###########################
+### Configure asdf
 . $(brew --prefix asdf)/libexec/asdf.sh 
+###########################
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)

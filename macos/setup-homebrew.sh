@@ -23,6 +23,7 @@ PACKAGES=(
   "tmux"      
   "vim"     
   "autojump" # used as oh-my-zsh plugin short for `j`
+  "command-not-found"
 )
 
 echo "Checking Homebrew packages..."
