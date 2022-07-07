@@ -24,6 +24,7 @@ PACKAGES=(
   "vim"     
   "autojump" # used as oh-my-zsh plugin short for `j`
   "command-not-found"
+  "trash"
 )
 
 echo "Checking Homebrew packages..."
