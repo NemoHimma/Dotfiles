@@ -61,5 +61,9 @@ zgenom load djui/alias-tips
 ######  Or add all of this in zshrc file manually
 git clone https://github.com/djui/alias-tips.git
 source alias-tips/alias-tips.plugin.zsh
-# Manual operation can replaced as git submodule add to simply.
+# Manual operation can replaced as 'git submodule add' to simply.
 ```
+
+# Resources to improve
+- [zsh-quickstart-kit](https://github.com/unixorn/zsh-quickstart-kit)
+- [denolfe-dotfiles](https://github.com/denolfe/dotfiles/)
