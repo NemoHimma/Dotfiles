@@ -71,6 +71,8 @@ setopt inc_append_history
 # Share history across all your terminal windows
 setopt share_history
 
+# Set Vim keybinds of terminal
+bindkey -v
 # Increase history size
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -115,6 +117,10 @@ if [ -f "$HB_CNF_HANDLER" ]; then
 source "$HB_CNF_HANDLER";
 fi
 ###########################
+
+###########################
+### Source iterm2_shell_integration
+source ~/.iterm2_shell_integration.zsh
 
 ###########################
 ### Configure asdf

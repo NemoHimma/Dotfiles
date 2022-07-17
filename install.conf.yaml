@@ -42,6 +42,10 @@
     ~/.tmux.conf: tmux/tmux.conf  # global customization
     ~/.tmux.conf.local: tmux/tmux.conf.local # local user customization
 
+    ####################    iterm2 ######################
+    ~/.iterm2_shell_integration.zsh: iTerm2/iterm2_shell_integration.zsh
+
+
 - asdf:
     - plugin: python
       url: https://github.com/tuvistavie/asdf-python.git
