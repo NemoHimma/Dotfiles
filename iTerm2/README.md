@@ -1,10 +1,10 @@
 # 1.Useful Features
 ## 1.1 Windows, Tabs and Panes.
-- ** Split Panes **: Bindkey `Cmd + |` and `Cmd + _` to split panes vertically and horizontally with default profile.
-- ** Navigate Panes **: Bindkey `Option + h/j/k/l` to select specific pane.
-- ** Navigate Tabs **: Bindkey `Cmd + h/l` to select tab, and `Cmd + <Number>` to jump to the tab.
-- ** Panes Focus **: `Cmd + Shift + Enter` to enter focus mode on current pane.
-- ** Window Focus ** `Cmd + Enter` to enter window focus mode.
+- **Split Panes**: Bindkey `Cmd + |` and `Cmd + _` to split panes vertically and horizontally with default profile.
+- **Navigate Panes**: Bindkey `Option + h/j/k/l` to select specific pane.
+- **Navigate Tabs**: Bindkey `Cmd + h/l` to select tab, and `Cmd + <Number>` to jump to the tab.
+- **Panes Focus**: `Cmd + Shift + Enter` to enter focus mode on current pane.
+- **Window Focus** `Cmd + Enter` to enter window focus mode.
 
 > Window arrangemen can save your current opened windows,tabs and panes so that you can restore it conviently.
 
