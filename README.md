@@ -4,6 +4,11 @@
 ```
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
 ```
+or CentOS
+
+```
+yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+```
 
 2. Install [asdf](https://github.com/asdf-vm/asdf) to manage multiple languages. Here, python 3.7.4 as a asdf-plugin is required for installing [powerline](https://github.com/powerline/powerline) which displays status in many applications like vim.
 
