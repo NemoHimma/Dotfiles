@@ -1,16 +1,11 @@
+#!/usr/bin/env zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-#!/usr/bin/env bash
-. $HOME/.asdf/asdf.sh
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
 
 # load zgenom
 source ~/.zgenom/zgenom.zsh
@@ -45,7 +40,6 @@ if ! zgenom saved; then
     zgenom save
 fi
 
-source ~/.p10k.zsh
 
 # History Options
 setopt append_history
@@ -74,16 +68,25 @@ TIMEFMT="%U user %S system %P cpu %*Es total"
 
 # Source local zshrc if exists
 test -f ~/.zshrc.local && source ~/.zshrc.local
+# Load aliases
+test -f ~/.aliases && source ~/.aliases
 
+###########################################################
 # Place to stash environment variables
 #test -f ~/.secrets && source ~/.secrets
-
 # Load functions
 #for f in $DOTFILES/functions/*; do source $f; done
-
 # Load aliases
 #for f in $DOTFILES/aliases/*.aliases.*sh; do source $f; done
-
 # Load all path files
 #for f in $DOTFILES/path/*.path.sh; do source $f; done
+###########################################################
 
+. $HOME/.asdf/asdf.sh
+source ~/.p10k.zsh
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
