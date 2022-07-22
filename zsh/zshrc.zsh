@@ -24,8 +24,9 @@ if ! zgenom saved; then
     #plugins
     zgenom ohmyzsh plugins/git # provides many aliases and a few useful functions about git.
     zgenom ohmyzsh plugins/tmux # aliases to use tmux for convenience.
-    #zgenom ohmyzsh plugins/autojump # Using 'j' to quick navigate among directories and files.
+    zgenom ohmyzsh plugins/autojump # Using 'j' to quick navigate among directories and files.
     zgenom ohmyzsh plugins/docker # aliases about docker
+    zgenom ohmyzsh plugins/fzf
 
     #plugins that not in ohmyzsh
     zgenom load zsh-users/zsh-autosuggestions
@@ -90,3 +91,6 @@ fpath=(${ASDF_DIR}/completions $fpath)
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+
+
+
