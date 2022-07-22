@@ -10,10 +10,14 @@ or CentOS
 yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
 ```
 
-Install fzf
+2. Install fzf and autojump
 ```
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+```
+
+```
+yum install autojump-zsh
 ```
 
 2. Install [asdf](https://github.com/asdf-vm/asdf) to manage multiple languages. Here, python 3.7.4 as a asdf-plugin is required for installing [powerline](https://github.com/powerline/powerline) which displays status in many applications like vim.
