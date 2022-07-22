@@ -1,1 +1,1 @@
-alias ga="gstate"
+alias gs="gstate"
