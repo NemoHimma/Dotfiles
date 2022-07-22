@@ -93,6 +93,11 @@ set noerrorbells visualbell t_vb=
 set splitbelow
 set splitright
 
+" copy and paste across system
+nnoremap <C-p> "*p
+nnoremap <C-y> "+y
+
+
 " quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
