@@ -15,7 +15,8 @@
     ~/bin/: 
         glob: true
         path: scripts/**
-
+    
+    ~/.aliases: zsh/aliases.zsh
     #asdf
     ~/.asdf: asdf 
 
@@ -38,9 +39,9 @@
 - asdf:
     - plugin: python
       url: https://github.com/tuvistavie/asdf-python.git
-      global: 3.7.4
+      global: 3.7.12
       versions: 
-        - 3.7.4
+        - 3.7.12
 
 
 - shell:
@@ -49,9 +50,9 @@
       stdout: true
       quiet: false
 
-    - command: ./git/set-gitconfig.sh #set up git
-      description: Configuring Git
-      stdout: true
-      quiet: false
+    #- command: ./git/set-gitconfig.sh #set up git
+    #  description: Configuring Git
+    #  stdout: true
+    #  quiet: false
 
 
