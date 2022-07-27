@@ -89,6 +89,10 @@ nmap Q <Nop>
 " disable audible bell
 set noerrorbells visualbell t_vb=
 
+" quicker tab movement
+nnoremap , gt
+nnoremap . gT
+
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
