@@ -91,6 +91,9 @@ fpath=(${ASDF_DIR}/completions $fpath)
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
-
-
-
+export FZF_BASE=/path/to/fzf/install/dir
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.aliases
+export PATH="$PATH:/home/tenzonzhang/bin"
+export LANG='en_US.uft-8'
+set -o vi

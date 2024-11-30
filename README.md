@@ -1,26 +1,21 @@
 # 0.Dependency
-1. Linux system requires system packages like `git curl wget zsh`. Perform following command.
+1. Ubuntu system requires system packages like `git curl wget zsh`. Perform following command.
 
 ```
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses-dev xz-utils tk-dev
 ```
-or CentOS
-
-```
-yum install gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
-```
-
-2. Install fzf and autojump
+2. Install Prerequite:
+- Install zsh
+- Setup exec zsh in .bashrc
+- Install [asdf](https://github.com/asdf-vm/asdf)
+- Install fzf and autojump
 ```
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+sudo apt install autojump-zsh
 ```
 
-```
-yum install autojump-zsh
-```
-
-2. Install [asdf](https://github.com/asdf-vm/asdf) to manage multiple languages. Here, python 3.7.4 as a asdf-plugin is required for installing [powerline](https://github.com/powerline/powerline) which displays status in many applications like vim.
+4. Here, python 3.7.4 as a asdf-plugin is required for installing [powerline](https://github.com/powerline/powerline) which displays status in many applications like vim.
 
 # 1.Dotbot
 Using [Dotbot](https://github.com/anishathalye/dotbot) to manage dotfiles.Here is a quick [tutorial](https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot) about how to use Dotbot to download your dotfiles on a new machine.
