@@ -96,4 +96,6 @@ export FZF_BASE=/path/to/fzf/install/dir
 source ~/.aliases
 export PATH="$PATH:/home/tenzonzhang/bin"
 export LANG='en_US.uft-8'
+export LC_ALL='en_US.utf-8'
+export LANGUAGE='en_US.utf-8'
 set -o vi
